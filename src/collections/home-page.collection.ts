@@ -9,9 +9,10 @@ const homePageCollection: CollectionConfig = {
   properties: {
     title: { type: 'string', title: 'Tên bản ghi' },
     span_text:{type:'string',title:'Tiêu đề phụ'},
-    hero_title: { type: 'string', title: 'Tiêu đề chính' },
+    hero_title: { type: 'string', title: 'Tiêu đề hero' },
     hero_desc: { type: 'string', title: 'Mô tả Hero' },
-    hero_image: { type: 'string', title: 'Hình ảnh Hero (URL)' }, // (Hoặc format: 'image' nếu bạn đã đổi)
+    button_hero: { type: 'string', title: 'Tiêu đề nút nhất hero' },
+    hero_image: { type: 'string', title: 'Hình ảnh Hero (URL)' },
     stat_projects: { type: 'number', title: 'Số dự án' },
     stat_experience: { type: 'number', title: 'Năm kinh nghiệm' },
   },
