@@ -20,8 +20,6 @@ binding = "CACHE_KV"
 id = "c1b3891fc79a46129071b7facdb73c2e"
 
 [vars]
-# Ép thẳng về môi trường production và thêm tên miền của chính worker vào CORS
 ENVIRONMENT = "production"
 CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173,https://kimtinphat-web.pages.dev,https://cms-kimtinphat.tranhuunghia2002.workers.dev"
-
-# ĐÃ XÓA BỎ ĐOẠN [env.production] GÂY XUNG ĐỘT BÊN DƯỚI
+BETTER_AUTH_URL = "https://cms-kimtinphat.tranhuunghia2002.workers.dev"
