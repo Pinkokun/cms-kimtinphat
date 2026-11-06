@@ -18,5 +18,4 @@ const homePageCollection: CollectionConfig = {
   required: ['title', 'hero_title'], // Thêm 'title' vào mảng bắt buộc
 },
 }
-chính
 export default homePageCollection
