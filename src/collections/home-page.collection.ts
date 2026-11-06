@@ -7,8 +7,9 @@ const homePageCollection: CollectionConfig = {
   schema: {
   type: 'object',
   properties: {
-    title: { type: 'string', title: 'Tên bản ghi' }, // THÊM TRƯỜNG BẮT BUỘC NÀY
-    hero_title: { type: 'string', title: 'Tiêu đề Hero' },
+    title: { type: 'string', title: 'Tên bản ghi' },
+    span_text:{type:'string',title:'Tiêu đề phụ'},
+    hero_title: { type: 'string', title: 'Tiêu đề chính' },
     hero_desc: { type: 'string', title: 'Mô tả Hero' },
     hero_image: { type: 'string', title: 'Hình ảnh Hero (URL)' }, // (Hoặc format: 'image' nếu bạn đã đổi)
     stat_projects: { type: 'number', title: 'Số dự án' },
@@ -17,5 +18,5 @@ const homePageCollection: CollectionConfig = {
   required: ['title', 'hero_title'], // Thêm 'title' vào mảng bắt buộc
 },
 }
-
+chính
 export default homePageCollection
