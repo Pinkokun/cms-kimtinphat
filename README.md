@@ -116,7 +116,7 @@ Your collections are automatically available via REST API:
    ```bash
    npm run deploy
    ```
-
+zxcaxcadcaadc
 3. **Run migrations on production:**
    ```bash
    npm run db:migrate
@@ -136,6 +136,8 @@ Your collections are automatically available via REST API:
 - [Documentation](https://sonicjs.com)
 
 ## License
+
+zxcaxcadcaadc
 
 MIT
 # sonijs
