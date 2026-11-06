@@ -3,39 +3,25 @@ main = "src/index.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Workers settings
 workers_dev = true
 
-# D1 Database
 [[d1_databases]]
 binding = "DB"
 database_name = "kimtinphat-web-db"
-database_id = "da0bae78-09bf-40aa-9412-1325bd3b48ef" # Run: wrangler d1 create my-sonicjs-db
+database_id = "da0bae78-09bf-40aa-9412-1325bd3b48ef"
 migrations_dir = "./node_modules/@sonicjs-cms/core/migrations"
 
-# R2 Bucket for media storage
 [[r2_buckets]]
 binding = "MEDIA_BUCKET"
 bucket_name = "kimtinphat-web-media"
 
-# KV namespace for the cache plugin + cross-isolate bootstrap fast-path.
-# REQUIRED for good TTFB: without it every cold isolate re-runs the full D1
-# bootstrap (~10s+ first byte). With it, only the first isolate per deploy pays
-# that cost and the rest skip it via a ~10ms KV read.
 [[kv_namespaces]]
 binding = "CACHE_KV"
-id = "c1b3891fc79a46129071b7facdb73c2e" # Run: wrangler kv namespace create CACHE_KV
+id = "c1b3891fc79a46129071b7facdb73c2e"
 
-# Environment variables
 [vars]
-ENVIRONMENT = "development"
-CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173,https://kimtinphat-web.pages.dev"
+# Ép thẳng về môi trường production và thêm tên miền của chính worker vào CORS
+ENVIRONMENT = "production"
+CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173,https://kimtinphat-web.pages.dev,https://cms-kimtinphat.tranhuunghia2002.workers.dev"
 
-# Production environment
-[env.production]
-name = "my-sonicjs-app-production"
-vars = { ENVIRONMENT = "production" }
-
-# Observability
-[observability]
-enabled = true
+# ĐÃ XÓA BỎ ĐOẠN [env.production] GÂY XUNG ĐỘT BÊN DƯỚI
